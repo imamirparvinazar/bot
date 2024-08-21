@@ -81,7 +81,11 @@ const stage = new Scenes.Stage([moleculeWizard]);
 bot.use(session());
 bot.use(stage.middleware());
 
-bot.start((ctx) => ctx.scene.enter('molecule-wizard'));
+bot.start((ctx) => {
+    ctx.scene.leave(); // خروج از صحنه فعلی در صورت وجود
+    ctx.session = {};  // پاک کردن داده‌های جلسه
+    ctx.scene.enter('molecule-wizard'); // شروع دوباره صحنه
+});
 
 bot.launch();
 
