@@ -1,7 +1,7 @@
 const { Telegraf, Scenes, session } = require('telegraf');
 const axios = require('axios');
 
-const bot = new Telegraf('7500931643:AAGdf8UD1HdIJDZEh9A5cTBNPQNNrbAVyRc');
+const bot = new Telegraf('7959394807:AAG1ijrTNOS3gWPKcAtZYJcnU-zAB8VpbcA');
 
 // صحنه‌ها برای مدیریت مراحل مختلف جمع‌آوری اطلاعات
 const moleculeWizard = new Scenes.WizardScene(
