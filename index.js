@@ -63,7 +63,7 @@ const moleculeWizard = new Scenes.WizardScene(
             reward: ctx.wizard.state.data.reward
         };
 
-        axios.post('https://srv575377.hstgr.cloud:5000/create-daily-combo', data)
+        axios.post('https://srv575377.hstgr.cloud:6000/add-data', data)
         .then(response => {
             ctx.reply('اطلاعات با موفقیت ارسال شد!');
         })
